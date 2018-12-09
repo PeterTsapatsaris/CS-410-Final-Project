@@ -1,4 +1,5 @@
-Final Project Submission for Cristian Jansenson and Peter Tsapatsaris
+### CS 410 Final Project
+### Final Project Submission for Cristian Jansenson and Peter Tsapatsaris
 
 ### 1)  Overview of Code Function
 
