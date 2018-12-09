@@ -30,13 +30,12 @@ To implement the extraction, we relied on a few heuristics that we found to yiel
 ### 1)  3) Software Usage
 
 *Dependencies:*
-•	Python 3:  python.org/download/releases/3.0
-•	Jupyter Notebook is required to run the software: jupyter.org
-•	Pandas: pandas.pydata.org
-•	Numpy: numpy.org  
-•	NLTK: nltk.org/
-NOTE – please make sure that the entire NLTK library is installed! 
-•	Matplotlib: matplotlib.org
+-	Python 3:  python.org/download/releases/3.0
+-	Jupyter Notebook is required to run the software: jupyter.org
+-	Pandas: pandas.pydata.org
+-	Numpy: numpy.org  
+-	NLTK: nltk.org – NOTE please make sure that the entire NLTK library is installed! 
+-	Matplotlib: matplotlib.org
 
 The Jupyter notebook contains detailed instructions for how to run the software, and should be run in the same folder containing the data and “fromDFtoDF1.jpg”.  The implementation is very easily adaptable, but as written requires a CSV file of customer reviews containing the following columns:  "Product Name", "Brand Name", "Price", "Rating", "Reviews", "Review Votes." The data file is extracted into a pandas dataframe.
 
@@ -53,5 +52,5 @@ These use cases are just examples. Once the aspects are extracted and assigned s
 Both team members made substantial contributions to the project and deserve equal allotment of credit. Cristian did the majority of the coding for the aspect extraction loop in the code. He also found the sample data, and recorded the video walkthrough of the program. Peter formed the concept for the project, coded the example use cases, and wrote the documentation. Both team members reviewed all aspects of the project and provided edits and debugging. 
 
 ### 1)  Citations:
-•	We referred to the following code when writing the text parsing algorithm:  simply-python.com/2014/03/14/saving-output-of-nltk-text-concordance
-•	We referred to the following code relating to the use of  vader sentiment analyzer:  opensourceforu.com/2016/12/analysing-sentiments-nltk
+-	We referred to the following code when writing the text parsing algorithm:  simply-python.com/2014/03/14/saving-output-of-nltk-text-concordance
+-	We referred to the following code relating to the use of  vader sentiment analyzer:  opensourceforu.com/2016/12/analysing-sentiments-nltk
