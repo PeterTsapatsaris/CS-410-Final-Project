@@ -1,5 +1,6 @@
 ### CS 410 Final Project
 ### Final Project Submission for Cristian Jansenson and Peter Tsapatsaris
+A video presentation demonstrating usage of the software is available at https://youtu.be/MzhlXeYCjgk
 
 ### 1)  Overview of Code Function
 
@@ -46,8 +47,6 @@ We further implement three use cases:
 2.	*Sort brands by aspect rating:*  Using pandas’s *groupby*, *stack*, and *reset_index functions*, we are able to create a multilevel dataframe that displays each brand, their aspects, and their mean scores for each aspect.  Once flattened, we filter by a specific aspect and sort to retrieve the best and worst brands for the given aspect. 
 3.	*Discovery of insightful reviews:*  Using pandas’s *groupby* function, we create a dataframe containing the average sentiment score and customer rating by product. We then select products with a rating of 1, but an average sentiment score greater than 0.8. 
 These use cases are just examples. Once the aspects are extracted and assigned sentiment scores, there are a multitude of use cases. 
-
-A video presentation demonstrating usage of the software is available at https://youtu.be/MzhlXeYCjgk 
 
 ### 4) Team member contributions
 
