@@ -15,7 +15,7 @@ The end result is a dataframe containing aspect phrases for each product and the
 3.	*Discovery of insightful reviews:*  By finding conflicting aspect sentiment scores with the numerical reviews assigned by customers can yield useful information. For example, we found many examples where consumers rated a cellphone a 1, but the sentiment scores were high. These reviews tended to identify a discrete technical problem with the phone that performed well otherwise. These cases would potentially be ripe for customer service interventions.  
 
 
-### 1)  2)  Software Implementation
+### 2)  Software Implementation
 
 Our Python implementation is contained in a Jupyter notebook, and our example implementation uses a corpus of Amazon cell phone reviews found here:   https://www.kaggle.com/nehasontakke/amazon-unlocked-mobilecsv. We chose the terms “battery”, “screen”, “camera”, “performance” for aspects on this data set. 
 
@@ -27,7 +27,7 @@ To implement the extraction, we relied on a few heuristics that we found to yiel
 
 *Potential Future Improvements:*  Tinkering with the heuristics used by the aspect extractor may yield improvements to the function. For example, finding additional aspect terms through the discovery of syntagmatic and paradigmatically words may yield good results. 
 
-### 1)  3) Software Usage
+### 3) Software Usage
 
 *Dependencies:*
 -	Python 3:  python.org/download/releases/3.0
@@ -47,10 +47,10 @@ We further implement three use cases:
 3.	Discovery of insightful reviews:  Using pandas’s *groupby* function, we create a dataframe containing the average sentiment score and customer rating by product. We then select products with a rating of 1, but an average sentiment score greater than 0.8. 
 These use cases are just examples. Once the aspects are extracted and assigned sentiment scores, there are a multitude of use cases. 
 
-### 1)  4) Team member contributions
+### 4) Team member contributions
 
 Both team members made substantial contributions to the project and deserve equal allotment of credit. Cristian did the majority of the coding for the aspect extraction loop in the code. He also found the sample data, and recorded the video walkthrough of the program. Peter formed the concept for the project, coded the example use cases, and wrote the documentation. Both team members reviewed all aspects of the project and provided edits and debugging. 
 
-### 1)  Citations:
+### Citations:
 -	We referred to the following code when writing the text parsing algorithm:  simply-python.com/2014/03/14/saving-output-of-nltk-text-concordance
 -	We referred to the following code relating to the use of  vader sentiment analyzer:  opensourceforu.com/2016/12/analysing-sentiments-nltk
