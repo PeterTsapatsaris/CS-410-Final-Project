@@ -27,7 +27,7 @@ To implement the extraction, we relied on a few heuristics that we found to yiel
 
 *Potential Future Improvements:*  Tinkering with the heuristics used by the aspect extractor may yield improvements to the function. For example, finding additional aspect terms through the discovery of syntagmatic and paradigmatically words may yield good results. 
 
-### 3) Software Usage
+### 3) Software Usage 
 
 *Dependencies:*
 -	Python 3:  python.org/download/releases/3.0
@@ -37,7 +37,7 @@ To implement the extraction, we relied on a few heuristics that we found to yiel
 -	NLTK: nltk.org – NOTE please make sure that the entire NLTK library is installed! 
 -	Matplotlib: matplotlib.org
 
-The Jupyter notebook contains detailed instructions for how to run the software, and should be run in the same folder containing the data and “fromDFtoDF1.jpg”.  The implementation is very easily adaptable, but as written requires a CSV file of customer reviews containing the following columns:  "Product Name", "Brand Name", "Price", "Rating", "Reviews", "Review Votes." The data file is extracted into a pandas dataframe.
+The Jupyter notebook contains detailed instructions for how to run the software, and should be run in the same folder containing the data (the data is contained in the "Amazon_Unlocked_Mobile.rar" and must be unzipped before running) and “fromDFtoDF1.jpg”.  The implementation is very easily adaptable, but as written requires a CSV file of customer reviews containing the following columns:  "Product Name", "Brand Name", "Price", "Rating", "Reviews", "Review Votes." The data file is extracted into a pandas dataframe.
 
 The user must select the aspects they wish to extract by setting the *relevant_aspects* variable. In our example we use: "battery", "screen", "camera", and "performance". Aspect extraction is performed by the *get_all_phrases_containing_tar_wrd* function, which takes as input the target aspect term, the sentence to be analyzed, and two integers representing how far in each direction from the aspect term defines the phrase. It returns phrases containing the aspect word with the length specified. The function is called repeatedly in the body of the program, which loops through the text of each review in the dataframe, parses them into sentences, and passes those sentences to *get_all_phrases_containing_tar_wrd*. The end result is a dataframe with the columns “brand”, “phrase”, rating”, “aspect” and “review_id”. Each phrase is in turn analyzed by VADER and assigned sentiment scores, which are appended as new columns.
 
@@ -46,6 +46,8 @@ We further implement three use cases:
 2.	*Sort brands by aspect rating:*  Using pandas’s *groupby*, *stack*, and *reset_index functions*, we are able to create a multilevel dataframe that displays each brand, their aspects, and their mean scores for each aspect.  Once flattened, we filter by a specific aspect and sort to retrieve the best and worst brands for the given aspect. 
 3.	*Discovery of insightful reviews:*  Using pandas’s *groupby* function, we create a dataframe containing the average sentiment score and customer rating by product. We then select products with a rating of 1, but an average sentiment score greater than 0.8. 
 These use cases are just examples. Once the aspects are extracted and assigned sentiment scores, there are a multitude of use cases. 
+
+A video presentation demonstrating usage of the software is available at https://youtu.be/MzhlXeYCjgk 
 
 ### 4) Team member contributions
 
